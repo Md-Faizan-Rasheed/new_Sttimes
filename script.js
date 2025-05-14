@@ -1,11 +1,45 @@
 
-// Mobile menu toggle
-const menuBtn = document.querySelector('.mobile-menu-btn');
-const navLinks = document.querySelector('.nav-links');
+// header 
+// script.js
+const newNavLinks = document.getElementById("navigationLinks");
+const newBtn = document.querySelector(".menu-toggle-btn");
 
-menuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+function toggleNewMenu() {
+    if (newNavLinks.style.display === "none") {
+        newNavLinks.style.display = "flex";
+        newNavLinks.style.flexDirection = "column";
+        newNavLinks.style.width = "100%";
+        newNavLinks.style.marginTop = "10px";
+    } else {
+        newNavLinks.style.display = "none";
+    }
+}
+
+function handleNewResize() {
+    const width = window.innerWidth;
+
+    if (width < 998) {
+        newBtn.style.display = "block";
+        if (!newNavLinks.dataset.toggled || newNavLinks.dataset.toggled === "false") {
+            newNavLinks.style.display = "none";
+        }
+    } else {
+        newBtn.style.display = "none";
+        newNavLinks.style.display = "flex";
+        newNavLinks.style.flexDirection = "row";
+        newNavLinks.style.width = "auto";
+        newNavLinks.dataset.toggled = "false";
+    }
+}
+
+newBtn.addEventListener("click", () => {
+    const isVisible = newNavLinks.style.display === "flex";
+    newNavLinks.dataset.toggled = isVisible ? "true" : "false";
 });
+
+window.addEventListener("resize", handleNewResize);
+window.addEventListener("load", handleNewResize);
+
 
 
 function toggleItem(key) {
@@ -94,3 +128,45 @@ currentSlide = index;
 updateSlider();
 });
 });
+
+function slideCards(direction) {
+      const container = document.getElementById("cardSlider");
+      const cardWidth = container.offsetWidth;
+      container.scrollBy({ left: cardWidth * direction, behavior: 'smooth' });
+    }
+
+//         const newNavLinks = document.getElementById("navigationLinks");
+// const newBtn = document.querySelector(".menu-toggle-btn");
+
+// function toggleNewMenu() {
+//     if (newNavLinks.style.display === "none") {
+//         newNavLinks.style.display = "flex";
+//         newNavLinks.style.flexDirection = "column";
+//         newNavLinks.style.width = "100%";
+//         newNavLinks.style.marginTop = "10px";
+//     } else {
+//         newNavLinks.style.display = "none";
+//     }
+// }
+
+// function handleNewResize() {
+//     const width = window.innerWidth;
+
+//     if (width < 990) {
+//         newBtn.style.display = "block";
+//         if (!newNavLinks.dataset.toggled || newNavLinks.dataset.toggled === "false") {
+//             newNavLinks.style.display = "none";
+//         }
+//     } else {
+//         newBtn.style.display = "none";
+//         newNavLinks.style.display = "flex";
+//         newNavLinks.style.flexDirection = "row";
+//         newNavLinks.style.width = "auto";
+//         newNavLinks.dataset.toggled = "false";
+//     }
+// }
+
+// newBtn.addEventListener("click", () => {
+//     const isVisible = newNavLinks.style.display === "flex";
+//     newNavLinks.dataset.toggled = isVisible ? "true" : "false";
+// });
