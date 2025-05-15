@@ -13,6 +13,10 @@
             padding:0;
         }
         
+        html {
+    scroll-behavior: smooth;
+  }
+
         .container {
             /* max-width: 1200px; */
             margin: 0 auto;
@@ -203,6 +207,8 @@
            flex-direction: column;
            align-items:start;
            margin-top: 20px;
+           /* border-top: 2px solid black; */
+           padding: 5px;
 
        }
         .nav-item124:hover {
@@ -995,7 +1001,7 @@
 
    .works_section h1 {
       text-align: center;
-      color: #575757;
+      color: black;
       font-weight: 700;
       font-size: 3rem;
       margin-bottom: 15px;
