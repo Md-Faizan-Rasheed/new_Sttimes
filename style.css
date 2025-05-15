@@ -179,9 +179,10 @@
 
         .slider-nav {
             margin-top: 30px;
+            gap: 50px;
         }
 
-        .nav-item {
+        .nav-item124 {
               text-decoration: none;
               color:#575757;
             display: flex;
@@ -201,9 +202,10 @@
            display: flex;
            flex-direction: column;
            align-items:start;
+           margin-top: 20px;
 
        }
-        .nav-item:hover {
+        .nav-item124:hover {
           color: #FEB640;
         }
 
@@ -693,7 +695,12 @@
 
     }
 
-    
+    .benefits h1{
+      /* display: flex;
+      justify-content: center; */
+      /* align-items: center; */
+      align-self: center;
+    }
     /* h1::after {
       content: '';
       display: block;
@@ -986,12 +993,13 @@
       /* box-shadow: 0 4px 20px rgba(0,0,0,0.2); */
     }
 
-    h1 {
+   .works_section h1 {
       text-align: center;
       color: #575757;
       font-weight: 700;
-      font-size: 2rem;
-      margin-bottom: 30px;
+      font-size: 3rem;
+      margin-bottom: 15px;
+      margin-top:40px;
       /* text-shadow: 1px 1px 4px rgba(0,0,0,0.5); */
     }
 
