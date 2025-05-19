@@ -93,7 +93,7 @@
       background: #fff;
       position: relative;
       /* width: 700px; */
-      width: 60%;
+      width: 90%;
     }
     .video-wrapper iframe {
         width:100%;
@@ -135,7 +135,7 @@
             .hero h1 {
                 font-weight: 600;
                 padding: 0 60px;
-        font-size: 30px !important; /* temporary test */
+        font-size: 25px !important; /* temporary test */
 
             }
             
