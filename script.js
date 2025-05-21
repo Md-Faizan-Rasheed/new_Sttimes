@@ -10,6 +10,10 @@ function toggleNewMenu() {
         newNavLinks.style.flexDirection = "column";
         newNavLinks.style.width = "100%";
         newNavLinks.style.marginTop = "10px";
+        newNavLinks.style.gap = "10px";
+        newNavLinks.style.boxShadow = "20px";
+
+
     } else {
         newNavLinks.style.display = "none";
     }
@@ -32,9 +36,16 @@ function handleNewResize() {
     }
 }
 
+// newBtn.addEventListener("click", () => {
+//     const isVisible = newNavLinks.style.display === "flex";
+//     newNavLinks.dataset.toggled = isVisible ? "true" : "false";
+//     newBtn.content='X'
+// });
+
 newBtn.addEventListener("click", () => {
     const isVisible = newNavLinks.style.display === "flex";
     newNavLinks.dataset.toggled = isVisible ? "true" : "false";
+    newBtn.textContent = newBtn.textContent === "X" ? "☰" : "X";
 });
 
 window.addEventListener("resize", handleNewResize);
